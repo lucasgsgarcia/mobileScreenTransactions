@@ -25,12 +25,19 @@ public class TelaProduto extends AppCompatActivity {
         Produto p = (Produto) it.getSerializableExtra("prodEdicao");
         if(p != null){
             edCodigo.setText(""+p.getCodigo());
+            edDescricao.setText(""+p.getDescricao());
+            edPreco.setText(""+p.getValor());
+            edEstoque.setText(""+p.getEstoque());
+            edFornecedor.setText(""+p.getNomeFornecedor());
+            edTelefoneFornec.setText(""+p.getTelefoneFornecedor());
             edCodigo.setEnabled(false);
             edDescricao.setText(p.getDescricao());
+            System.out.println("Entrei");
         }
     }
 
     public void confirmar(View v){
+        System.out.println("Tentei");
         Produto p = new Produto();
         p.setCodigo(Integer.parseInt(edCodigo.getText().toString()));
         p.setDescricao(edDescricao.getText().toString());

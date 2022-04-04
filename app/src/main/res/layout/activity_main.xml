@@ -8,15 +8,34 @@
     tools:context=".MainActivity" >
 <ListView
     android:layout_width="match_parent"
-    android:layout_height="0sp"
+    android:layout_height="wrap_content"
     android:layout_weight="10"
+    android:clickable="false"
     android:id="@+id/listaProdutos"/>
-    <Button
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Novo..."
-        android:onClick="novo"/>
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5sp"
+            android:text="Novo"
+            android:onClick="novo"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5sp"
+            android:text="Excluir"
+            android:onClick="excluir"/>
+    </LinearLayout>
+
+
 
 
 </LinearLayout>
+
+
