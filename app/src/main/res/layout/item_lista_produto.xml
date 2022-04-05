@@ -45,5 +45,14 @@
             android:layout_weight="8"
             android:id="@+id/il_valor"/>
 
+        <Button
+            android:id="@+id/btnLigar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:backgroundTint="@color/black"
+            android:onClick="ligar"
+            android:text="Ligar" />
+
     </LinearLayout>
 </LinearLayout>

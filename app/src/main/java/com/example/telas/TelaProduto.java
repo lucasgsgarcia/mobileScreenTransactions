@@ -3,6 +3,7 @@ package com.example.telas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -36,13 +37,18 @@ public class TelaProduto extends AppCompatActivity {
         }
     }
 
+    public void ligar(View v){
+        Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "12345"));
+        startActivity(intent);
+    }
+
     public void confirmar(View v){
         System.out.println("Tentei");
         Produto p = new Produto();
         p.setCodigo(Integer.parseInt(edCodigo.getText().toString()));
         p.setDescricao(edDescricao.getText().toString());
-        p.setValor(Integer.parseInt(edPreco.getText().toString()));
-        p.setEstoque(Integer.parseInt(edEstoque.getText().toString()));
+        p.setValor(Double.parseDouble(edPreco.getText().toString()));
+        p.setEstoque(Double.parseDouble(edEstoque.getText().toString()));
         p.setNomeFornecedor(edFornecedor.getText().toString());
         p.setTelefoneFornecedor(edTelefoneFornec.getText().toString());
         Intent resposta = new Intent();
